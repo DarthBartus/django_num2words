@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "translator.css" %}">
+	<title></title>
+</head>
+<body>
+	<div class="translator">
+
+		<h1>Liczby pisane słownie</h1>
+		<p>Wpisz do pola poniżej liczbę całkowitą z zakresu od 1 do 999999999999, a zostanie ona zapisana słownie.</p>
+		<form action="" method="post">
+		{% csrf_token %}
+		{{form}}
+		<button type="submit" value="Tłumacz">Tłumacz</button>
+		</form>
+
+		<p class="translated"><strong>{{ translated }}</strong></p>
+	</div>
+</body>
+</html>
