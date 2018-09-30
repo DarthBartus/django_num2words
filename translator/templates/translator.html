@@ -13,7 +13,8 @@
 		<p>Wpisz do pola poniżej liczbę całkowitą z zakresu od 1 do 999999999999, a zostanie ona zapisana słownie.</p>
 		<form action="" method="post">
 		{% csrf_token %}
-		{{form}}
+		<p><strong>Numer do przetłumaczenia:</strong></p>
+		<input type="number" name="toTranslate" max='999999999999' required id="id_toTranslate" min="0">
 		<button type="submit" value="Tłumacz">Tłumacz</button>
 		</form>
 
