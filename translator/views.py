@@ -17,4 +17,4 @@ def translator(request):
     else:
         form = TranslateForm()
 
-    return render(request, 'translator.html', {'form': form, 'translated': ""})
+    return render(request, 'translator.html', {'translated': ""})
