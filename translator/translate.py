@@ -13,6 +13,8 @@ def translate(number):
     fin = []
 
     for indx, sublist in enumerate(numList):
+        if sublist == '0':
+            return 'zero'
         if len(sublist) >= 2 and sublist[-2] == '1' and sublist[-1] != 0:
             if len(sublist) == 3:
                 fin.append(numdict[int(sublist[0]) * 100])
@@ -34,9 +36,9 @@ def translate(number):
                 else:
                     fin.append(orderDict[len(numList) - 1 - indx][1])
         else:
-            if sublist[0] == '1':
+            if sublist == '1':
                 fin.append(orderDict[len(numList) - 1 - indx][0])
-            elif int(sublist[0]) < 5:
+            elif int(sublist) < 5:
                 fin.append(orderDict[len(numList) - 1 - indx][1])
             else:
                 fin.append(orderDict[len(numList) - 1 - indx][2])
